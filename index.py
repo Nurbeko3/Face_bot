@@ -64,7 +64,7 @@ def start(message):
     if user_id not in user_data:
         user_data[user_id] = {'step': 'awaiting_photo'}
     bot.send_message(message.chat.id,
-                     "🔥 *CyberHub'ga xush kelibsiz, Agent!* 🔥\n"
+                     "🔥 *MESI FaceID botga xush kelibsiz!* 🔥\n"
                      "🌐 Tizimga ulanmoqda...\n"
                      "Birinchi qadam: Rasmingizni yuborish uchun quyidagi tugmani bosing! 📸",
                      parse_mode="Markdown", reply_markup=get_main_menu())
@@ -75,7 +75,7 @@ def request_photo(message):
     user_id = message.from_user.id
     if user_id in user_data and user_data[user_id]['step'] == 'awaiting_photo':
         bot.send_message(message.chat.id,
-                         "💾 *Tayyor!* Rasmingizni yuboring, cyber-agent! 📸",
+                         "💾 *Tayyor!* Rasmingizni yuboring! 📸",
                          parse_mode="Markdown", reply_markup=get_main_menu())
     else:
         bot.send_message(message.chat.id,
@@ -152,7 +152,7 @@ def handle_text(message):
                          f"🧑‍💻 *Ism:* {full_name}\n"
                          f"👤 *Rol:* {role}\n"
                          f"💼 *Lavozim / Yo'nalish va Kurs:* {position_or_course}\n"
-                         f"Tizimni *hacking* qilish uchun 'Yuborish' tugmasini bosing! 👾",
+                         f"Ma'lumotlar to'g'ri bo'sa 'Yuborish' tugmasini bosing! 👾",
                          parse_mode="Markdown", reply_markup=get_submit_menu())
 
 # Rol tanlash (Xodim yoki Talaba)
